@@ -1,58 +1,90 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import "./homepage.module.css";
 
-export default function Homepage() {
+export const Homepage = () => {
   return (
-    <div className="min-h-screen bg-[#D9D3CA] p-8 grid grid-cols-3 gap-4 font-sans">
-      <div className="bg-white rounded-2xl p-6 flex flex-col justify-center">
-        <h1 className="text-3xl font-black">Bunjiro</h1>
-        <h2 className="text-2xl text-gray-500">Yamada</h2>
-      </div>
+    <div className="homepage" data-model-id="1:2">
+      <div className="div">
+        <div className="overlap">
+          <div className="rectangle" />
 
-      <div className="bg-white rounded-2xl flex items-center justify-center">
-        <img
-          src="my-portfolio/src/images/157149457.jpeg"
-          alt="Bunjiro Yamada"
-          className="rounded-full h-32 w-32 object-cover"
-        />
-      </div>
+          <p className="bunjiro-yamada">
+            <span className="text-wrapper">
+              Bunjiro <br />
+            </span>
 
-      <div className="bg-white rounded-2xl p-6 text-sm leading-relaxed">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          odio arcu, efficitur nec risus ut, porta auctor lorem. Phasellus
-          rutrum quam sed tincidunt varius. Suspendisse.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-2xl col-span-1 row-span-2 overflow-hidden">
-        <img
-          src="my-portfolio/src/images/52148898258_089d86bc03_o.jpg"
-          alt="Building"
-          className="object-cover h-full w-full"
-        />
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 flex flex-col justify-between">
-        <div>
-          <h2 className="text-2xl font-bold">See my latest</h2>
-          <p className="text-gray-400 text-xl">work</p>
+            <span className="span">Yamada</span>
+          </p>
         </div>
-        <button className="mt-4 self-end text-2xl">→</button>
-      </div>
 
-      <div className="bg-white rounded-2xl p-6">
-        <h2 className="text-2xl font-bold">Contact</h2>
-        <p className="text-gray-400">me</p>
-        <div className="flex gap-4 mt-2">
-          <a href="https://github.com/bunjiro1213" target="_blank">
-            <FaGithub size={24} />
-          </a>
-          <a href="https://linkedin.com" target="_blank">
-            <FaLinkedin size={24} />
-          </a>
+        <img
+          className="img"
+          alt="Rectangle"
+          src="https://c.animaapp.com/mcjh3hguLTu7SD/img/rectangle-4.png"
+        />
+
+        <div className="overlap-group">
+          <p className="see-my-latest-work">
+            <span className="text-wrapper-2">See my latest </span>
+
+            <span className="text-wrapper-3">work</span>
+          </p>
+
+          <div className="overlap-2">
+            <img
+              className="arrow"
+              alt="Arrow"
+              src="https://c.animaapp.com/mcjh3hguLTu7SD/img/arrow-11.svg"
+            />
+
+            <div className="rectangle-2" />
+          </div>
+
+          <div className="text-wrapper-4">All Projects</div>
+        </div>
+
+        <div className="div-wrapper">
+          <p className="p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            odio arcu, efficitur nec risus ut, porta auctor lorem. Phasellus
+            rutrum quam sed tincidunt varius. Suspendisse.
+          </p>
+        </div>
+
+        <div className="ellipse-wrapper">
+          <img
+            className="ellipse"
+            alt="Ellipse"
+            src="https://c.animaapp.com/mcjh3hguLTu7SD/img/ellipse-1.png"
+          />
+        </div>
+
+        <div className="overlap-group-2">
+          <div className="rectangle-3" />
+
+          <p className="contact-me">
+            <span className="text-wrapper">
+              Contact
+              <br />
+            </span>
+
+            <span className="span">me</span>
+          </p>
+
+          <img
+            className="image"
+            alt="Image"
+            src="https://c.animaapp.com/mcjh3hguLTu7SD/img/image-1.png"
+          />
+
+          <img
+            className="image-2"
+            alt="Image"
+            src="https://c.animaapp.com/mcjh3hguLTu7SD/img/image-2.png"
+          />
         </div>
       </div>
     </div>
   );
-}
+};
+

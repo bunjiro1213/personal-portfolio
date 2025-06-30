@@ -1,0 +1,237 @@
+.homepage {
+  background-color: #dbd3c6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.homepage .div {
+  background-color: #dbd3c6;
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.homepage .overlap {
+  height: 320px;
+  left: 28px;
+  position: absolute;
+  top: 28px;
+  width: 487px;
+}
+
+.homepage .rectangle {
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 313px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 487px;
+}
+
+.homepage .bunjiro-yamada {
+  color: transparent;
+  font-family: "Jost", Helvetica;
+  font-size: 79.4px;
+  font-weight: 600;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 84px;
+  position: absolute;
+  top: 59px;
+  width: 399px;
+}
+
+.homepage .text-wrapper {
+  color: #000000;
+}
+
+.homepage .span {
+  color: #898989;
+}
+
+.homepage .img {
+  height: 592px;
+  left: 28px;
+  object-fit: cover;
+  position: absolute;
+  top: 378px;
+  width: 487px;
+}
+
+.homepage .overlap-group {
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 454px;
+  left: 532px;
+  position: absolute;
+  top: 516px;
+  width: 487px;
+}
+
+.homepage .see-my-latest-work {
+  color: transparent;
+  font-family: "Jost", Helvetica;
+  font-size: 60.5px;
+  font-weight: 400;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 58.6px;
+  position: absolute;
+  top: 56px;
+  width: 412px;
+}
+
+.homepage .text-wrapper-2 {
+  color: #000000;
+  font-weight: 500;
+}
+
+.homepage .text-wrapper-3 {
+  color: #898989;
+  font-weight: 500;
+}
+
+.homepage .overlap-2 {
+  border-radius: 73px;
+  height: 34px;
+  left: 393px;
+  position: absolute;
+  top: 385px;
+  width: 54px;
+}
+
+.homepage .arrow {
+  height: 1px;
+  left: 18px;
+  position: absolute;
+  top: 17px;
+  width: 18px;
+}
+
+.homepage .rectangle-2 {
+  border: 1px solid;
+  border-color: #898989;
+  border-radius: 73px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 54px;
+}
+
+.homepage .text-wrapper-4 {
+  color: #a1a1a1;
+  font-family: "Jost", Helvetica;
+  font-size: 20.5px;
+  font-weight: 600;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 19.9px;
+  position: absolute;
+  top: 384px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.homepage .div-wrapper {
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 454px;
+  left: 913px;
+  position: absolute;
+  top: 28px;
+  width: 487px;
+}
+
+.homepage .p {
+  color: #333333;
+  font-family: "Jost", Helvetica;
+  font-size: 31.2px;
+  font-weight: 600;
+  left: 45px;
+  letter-spacing: 0;
+  line-height: 40.4px;
+  position: absolute;
+  top: 78px;
+  width: 397px;
+}
+
+.homepage .ellipse-wrapper {
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 454px;
+  left: 532px;
+  position: absolute;
+  top: 28px;
+  width: 364px;
+}
+
+.homepage .ellipse {
+  height: 275px;
+  left: 37px;
+  object-fit: cover;
+  position: absolute;
+  top: 102px;
+  width: 289px;
+}
+
+.homepage .overlap-group-2 {
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 458px;
+  left: 1050px;
+  position: absolute;
+  top: 512px;
+  width: 350px;
+}
+
+.homepage .rectangle-3 {
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 458px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 350px;
+}
+
+.homepage .contact-me {
+  color: transparent;
+  font-family: "Jost", Helvetica;
+  font-size: 60.5px;
+  font-weight: 500;
+  left: 34px;
+  letter-spacing: 0;
+  line-height: 58.6px;
+  position: absolute;
+  top: 60px;
+  width: 246px;
+}
+
+.homepage .image {
+  height: 46px;
+  left: 36px;
+  object-fit: cover;
+  position: absolute;
+  top: 206px;
+  width: 46px;
+}
+
+.homepage .image-2 {
+  height: 77px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 192px;
+  width: 77px;
+}
