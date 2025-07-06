@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-}
+}ç
 
 .homepage .div {
   background-color: #dbd3c6;
@@ -41,7 +41,6 @@
   letter-spacing: 0;
   line-height: 84px;
   position: absolute;
-  top: 59px;
   width: 399px;
 }
 
@@ -54,6 +53,7 @@
 }
 
 .homepage .img {
+  border-radius: 50px;
   height: 592px;
   left: 28px;
   object-fit: cover;
@@ -82,7 +82,6 @@
   letter-spacing: 0;
   line-height: 58.6px;
   position: absolute;
-  top: 56px;
   width: 412px;
 }
 
@@ -159,7 +158,7 @@
   letter-spacing: 0;
   line-height: 40.4px;
   position: absolute;
-  top: 78px;
+  top: 25px;
   width: 397px;
 }
 
@@ -176,12 +175,14 @@
 
 .homepage .ellipse {
   height: 275px;
+  width: 275px; /* make equal to height */
   left: 37px;
-  object-fit: cover;
-  position: absolute;
   top: 102px;
-  width: 289px;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 50%;
 }
+
 
 .homepage .overlap-group-2 {
   background-color: #ffffff;
@@ -207,18 +208,18 @@
 
 .homepage .contact-me {
   color: transparent;
-  font-family: "Jost", Helvetica;
+  font-family: "Jost Medium", "Jost", Helvetica;
   font-size: 60.5px;
   font-weight: 500;
   left: 34px;
   letter-spacing: 0;
   line-height: 58.6px;
   position: absolute;
-  top: 60px;
   width: 246px;
 }
 
 .homepage .image {
+  border-radius: 50px;
   height: 46px;
   left: 36px;
   object-fit: cover;
@@ -228,6 +229,7 @@
 }
 
 .homepage .image-2 {
+  border-radius: 50px;
   height: 77px;
   left: 77px;
   object-fit: cover;
