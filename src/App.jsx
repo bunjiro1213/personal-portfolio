@@ -1,12 +1,12 @@
-import Homepage from './components/homepage.jsx'
-import './App.css'
+import Homepage from "./components/homepage/homepage"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
-  return (
-      return <Homepage />
-  )
+	return (
+    <div style={{ margin: 0, padding: 0 }}>
+      <Homepage/>
+    </div>
+	)
 }
 
 export default App
