@@ -1,0 +1,51 @@
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 0px 40px;
+  background-color: #dbd3c6;
+  align-items: center;
+}
+
+.skillsCard {
+  background: white;
+  border-radius: 50px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skillsImage img {
+  width: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillBubble {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+}
+
+.blackText {
+  color: #000;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.grayText {
+  color: #898989;
+  font-weight: bold;
+  font-size: 50px;
+}
