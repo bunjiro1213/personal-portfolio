@@ -1,13 +1,15 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 250px; 
+  grid-template-columns: repeat(10, 1fr); /* more flexible sizing */
+  grid-auto-rows: 80px; /* height of each grid row "unit" */
   gap: 20px;
   padding: 40px;
   background-color: #dbd3c6;
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
+/* Generic Card Styles */
 .card {
   background: white;
   border-radius: 50px;
@@ -15,46 +17,85 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+}
+
+/* ✅ Manual grid placement — adjust these as needed */
+.nameCard {
+  grid-column: 1 / span 4;   /* spans 5 out of 12 columns */
+  grid-row: span 2;
   justify-content: center;
 }
 
-.imageCard {
-  height: 150vh; 
-  grid-row: span 1;       
-  height: 125px;  
+.photoCard {
+  grid-column: 5 / span 2;
+  grid-row: span 4;
+  align-items: center;
+  justify-content: center;
 }
 
-.nameCard,
-.photoCard,
-.bioCard,
-.projectCard,
+.bioCard {
+  grid-column: 7 / span 4;
+  grid-row: span 4;
+  overflow-y: auto;
+  justify-content: center;
+}
+
+.buildingCard {
+  grid-column: 1 / span 4;
+  grid-row: span 6;
+  padding: 0px;
+}
+
+.projectCard {
+  grid-column: 5 / span 3;
+  grid-row: span 4;
+  justify-content: center;
+}
+
 .contactCard {
-  grid-row: span 1;          
-  height: 250px;             
+  grid-column: 8 / span 3;
+  grid-row: span 4;
 }
 
-
-.buncard {
-  background: white;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50vh;
-  grid-row: span 1;       
-  height: 125px;  
-}
-
+/* Specific Visual Styling */
 .blackText {
   color: #000;
   font-weight: bold;
+  font-size: 40px;
 }
 
 .grayText {
   color: #898989;
   font-weight: bold;
+  font-size: 40px;
+
+}
+
+.blackNameText{
+  color: #000;
+  font-weight: bold;
+}
+
+.grayNameText{
+  color: #898989;
+  font-weight: bold;
+}
+
+.bioText{
+  color: #000;
+  font-size: 25px;
+}
+
+.blackContactText{
+  color: #000;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.grayContactText{
+  color: #898989;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .circleImage {
@@ -68,7 +109,7 @@
 .roundedImage {
   border-radius: 25px;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -98,8 +139,4 @@
 .icon {
   width: 30px;
   height: 30px;
-}
-
-.nameCard, .photoCard, .bioCard, .imageCard, .projectCard, .contactCard {
-  min-height: 250px;
 }

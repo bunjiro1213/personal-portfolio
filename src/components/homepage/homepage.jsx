@@ -1,38 +1,41 @@
 import React from "react";
 import styles from "./Homepage.module.css";
+import photo from '../../images/157149457.jpeg';
+import building from '../../images/52148898258_089d86bc03_o.jpg';
 
 const Homepage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.buncard + ' ' + styles.nameCard}>
+      {/* Name Card */}
+      <div className={`${styles.card} ${styles.nameCard}`}>
         <h1>
-          <span className={styles.blackText}>Bunjiro</span>
+          <span className={styles.blackNameText}>Bunjiro</span>
           <br />
-          <span className={styles.grayText}>Yamada</span>
+          <span className={styles.grayNameText}>Yamada</span>
         </h1>
       </div>
 
-      <div className={styles.card + ' ' + styles.photoCard}>
-        <img
-          src="bunjiro-photo.jpg"
-          alt="Bunjiro"
-          className={styles.circleImage}
-        />
+      {/* Photo Card */}
+      <div className={`${styles.card} ${styles.photoCard}`}>
+        <img src={photo} alt="Bunjiro" className={styles.circleImage} />
       </div>
 
-      <div className={styles.card + ' ' + styles.bioCard}>
-        <p>
+      {/* Bio Card */}
+      <div className={`${styles.card} ${styles.bioCard}`}>
+        <p className={styles.bioText}>
           <strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit.
           Vestibulum odio arcu, efficitur nec risus ut, porta auctor lorem.
           <strong> Phasellus rutrum quam sed tincidunt varius.</strong> Suspendisse.
         </p>
       </div>
 
-      <div className={styles.card + ' ' + styles.imageCard}>
-        <img src="building.jpg" alt="building" className={styles.roundedImage} />
+      {/* Image Card */}
+      <div className={`${styles.card} ${styles.buildingCard}`}>
+        <img src={building} alt="Building" className={styles.roundedImage} />
       </div>
 
-      <div className={styles.card + ' ' + styles.projectCard}>
+      {/* Projects Card */}
+      <div className={`${styles.card} ${styles.projectCard}`}>
         <h2>
           <span className={styles.blackText}>See my latest</span>
           <br />
@@ -44,11 +47,12 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className={styles.card + ' ' + styles.contactCard}>
+      {/* Contact Card */}
+      <div className={`${styles.card} ${styles.contactCard}`}>
         <h2>
-          <span className={styles.blackText}>Contact</span>
+          <span className={styles.blackContactText}>Contact</span>
           <br />
-          <span className={styles.grayText}>me</span>
+          <span className={styles.grayContactText}>me</span>
         </h2>
         <div className={styles.iconRow}>
           <img src="github-icon.png" alt="GitHub" className={styles.icon} />
