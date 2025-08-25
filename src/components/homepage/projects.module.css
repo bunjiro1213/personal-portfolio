@@ -1,0 +1,91 @@
+.projectSection {
+  background-color: #dbd3c6;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.projectTitle {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.blackText {
+  color: #000;
+}
+
+.grayText {
+  color: #898989;
+}
+
+.card {
+  background-color: #cdbda2;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px #aaa;
+}
+
+.imageWrapper {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tag {
+  background: #e1ddd6;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.expandButton {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #001C4D;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.expandButton:hover {
+  background: #d5d0c8;
+}

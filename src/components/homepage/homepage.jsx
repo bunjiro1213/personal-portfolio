@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Homepage.module.css";
 import photo from '../../images/157149457.jpeg';
 import building from '../../images/52148898258_089d86bc03_o.jpg';
+import github from '../../images/Octicons-mark-github.svg'
+import linkedin from '../../images/linkedin-icon-logo-png-transparent.png'
 
 const Homepage = () => {
   return (
@@ -54,8 +56,12 @@ const Homepage = () => {
           <span className={styles.grayContactText}>me</span>
         </h2>
         <div className={styles.iconRow}>
-          <img src="github-icon.png" alt="GitHub" className={styles.icon} />
-          <img src="linkedin-icon.png" alt="LinkedIn" className={styles.icon} />
+          <a href="https://github.com/bunjiro1213" target="_blank" rel="noopener noreferrer">
+            <img src={github} alt="GitHub" className={styles.icon} />
+          </a>
+          <a href="www.linkedin.com/in/bunjiro-yamada-339b71280" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin} alt="LinkedIn" className={styles.icon} />
+          </a>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Homepage from "./components/homepage/homepage"
+import Projects from "./components/homepage/projects"
 import Skills from "./components/homepage/skills"
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div style={{ margin: 0, padding: 0 }}>
       <Homepage/>
       <Skills/>
+      <Projects/>
     </div>
 	)
 }
