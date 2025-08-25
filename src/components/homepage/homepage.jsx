@@ -9,8 +9,7 @@ const Homepage = () => {
       {/* Name Card */}
       <div className={`${styles.card} ${styles.nameCard}`}>
         <h1>
-          <span className={styles.blackNameText}>Bunjiro</span>
-          <br />
+          <span className={styles.blackNameText}>Bunjiro </span>
           <span className={styles.grayNameText}>Yamada</span>
         </h1>
       </div>
