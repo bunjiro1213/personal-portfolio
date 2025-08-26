@@ -1,7 +1,6 @@
 import Homepage from "./components/homepage/homepage"
 import Projects from "./components/homepage/projects"
 import Skills from "./components/homepage/skills"
-
 const App = () => {
 
 	return (

@@ -3,21 +3,37 @@
   grid-template-columns: repeat(10, 1fr); /* more flexible sizing */
   grid-auto-rows: 80px; /* height of each grid row "unit" */
   gap: 20px;
-  padding: 40px;
-  background-color: #dbd3c6;
+  padding: 5% 10%;
+  background-color: #F3F2EC;
   min-height: 100vh;
   margin: 0 auto;
 }
 
 /* Generic Card Styles */
 .card {
-  background: white;
+  background: rgba(255, 255, 255, 0.7); /* semi-translucent white */
   border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* softer, deeper shadow */
   padding: 30px;
   display: flex;
   flex-direction: column;
 }
+
+.arrowButton {
+  font-size: 1.5rem;
+  color: #a1a1a1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.arrowButton:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+
 
 /* ✅ Manual grid placement — adjust these as needed */
 .nameCard {

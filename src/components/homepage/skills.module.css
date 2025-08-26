@@ -3,12 +3,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2.5rem; /* 40px */
   padding: 0 2.5rem; /* 40px */
-  background-color: #dbd3c6;
+  background-color: #F3F2EC;
   align-items: center;
 }
 
 .skillsCard {
-  background: white;
+  background: rgba(255, 255, 255, 0.7); /* semi-translucent white */
   border-radius: 3.125rem; /* 50px */
   padding: 2.5rem; /* 40px */
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@
 }
 
 .skillBubble {
-  background: white;
+  background: rgba(255, 255, 255, 0.7); /* semi-translucent white */
   padding: 1.25rem 1.875rem; /* 20px 30px */
   border-radius: 999px;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);

@@ -44,7 +44,12 @@ const Homepage = () => {
         </h2>
         <div className={styles.projectFooter}>
           <span className={styles.allProjects}>All Projects</span>
-          <span className={styles.arrow}>&rarr;</span>
+          <button
+            className={styles.arrowButton}
+            onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
+          >
+            &rarr;
+          </button>
         </div>
       </div>
 
