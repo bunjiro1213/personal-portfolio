@@ -4,6 +4,7 @@ import styles from "./projects.module.css";
 import jacobproject from "../../images/Screenshot 2025-08-25 at 6.31.04 PM.png"; 
 import njtransit from "../../images/35ce6002-810d-44b5-87c1-541bc636240a_3392x2264.jpg"
 
+
 const Projects = () => {
   useEffect(() => {
     // Basic reveal for all cards

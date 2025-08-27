@@ -1,11 +1,61 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Homepage.module.css";
 import photo from '../../images/157149457.jpeg';
 import building from '../../images/52148898258_089d86bc03_o.jpg';
 import github from '../../images/Octicons-mark-github.svg'
 import linkedin from '../../images/linkedin-icon-logo-png-transparent.png'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const Homepage = () => {
+useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate cards into view initially
+  gsap.fromTo(
+    `.${styles.card}`,
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
+  );
+
+  // Animate the name text
+  gsap.fromTo(
+    `.${styles.blackNameText}, .${styles.grayNameText}`,
+    { opacity: 0, x: -30 },
+    { opacity: 1, x: 0, duration: 1, delay: 0.5, stagger: 0.2 }
+  );
+
+  // Animate the icons
+  gsap.fromTo(
+    `.${styles.icon}`,
+    { scale: 0, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.8, delay: 1, stagger: 0.2, ease: "back.out(1.7)" }
+  );
+
+  // 🌟 Parallax effect for the whole Homepage section
+  const parallaxLayers = [
+    { target: `.${styles.nameCard}`, y: -50 },      // moves up slower
+    { target: `.${styles.photoCard}`, y: -80 },     // moves up a bit more
+    { target: `.${styles.bioCard}`, y: -100 },      // further back
+    { target: `.${styles.buildingCard}`, y: -150 }, // background-ish
+    { target: `.${styles.projectCard}`, y: -70 },
+    { target: `.${styles.contactCard}`, y: -90 },
+  ];
+
+  parallaxLayers.forEach(({ target, y }) => {
+    gsap.to(target, {
+      y,
+      ease: "none",
+      scrollTrigger: {
+        trigger: `.${styles.container}`, // whole homepage section
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  });
+}, []);
   return (
     <div className={styles.container}>
       {/* Name Card */}
