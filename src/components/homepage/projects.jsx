@@ -47,18 +47,25 @@ const Projects = () => {
         </div>
 
         <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Third Project</h2>
+          <h2 className={styles.cardTitle}>Home Prices Predictor</h2>
           <p className={styles.projectDescription}>
-            Another coaching tool or app here.
+            Built an end-to-end machine learning pipeline for price prediction
           </p>
           <div className={styles.imageWrapper}>
             <img src={jacobproject} alt="Project Screenshot" className={styles.projectImage} />
           </div>
           <div className={styles.tags}>
-            <span className={styles.tag}>Next.js</span>
-            <span className={styles.tag}>TypeScript</span>
+            <span className={styles.tag}>Python</span>
+            <span className={styles.tag}>Scikit-learn</span>
+            <span className={styles.tag}>Pandas</span>
+            <span className={styles.tag}>Matplotlib</span>
           </div>
-          <button className={styles.expandButton}>Open in GitHub</button>
+          <button
+            className={styles.expandButton}
+            onClick={() => window.open("https://github.com/bunjiro1213/housing-prices", "_blank")}
+          >
+            Open in GitHub
+          </button>
         </div>
       </div>
     </div>
