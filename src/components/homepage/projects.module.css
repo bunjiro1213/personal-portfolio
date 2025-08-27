@@ -37,7 +37,7 @@
   border-radius: 2rem;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   min-width: 320px;   /* ensures horizontal scroll */
-  max-width: 700px;
+  max-width: 50%;
   flex-shrink: 0;
   position: relative;
   scroll-snap-align: start;
@@ -78,37 +78,59 @@
   display: block;
 }
 
+.NJprojectImage{
+  width: 100%;
+  height: auto;
+  max-height: 410px;
+  border-radius: 1rem;
+  display: block;
+}
+
+.footerRow {
+  display: flex;
+  justify-content: space-between; /* pushes tags left, button right */
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1.5rem;
+  flex: 1; /* lets it shrink/grow */
 }
 
 .tag {
-  background: #e1ddd6;
+  background: transparent;        /* ghost style */
+  border: 2px solid #000;         /* black border */
   border-radius: 999px;
   padding: 0.6rem 1.2rem;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #555;
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #000;                    /* black text */
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #000;               /* fill black */
+  color: #fff;                    /* white text */
 }
 
 .expandButton {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  position: static;  /* remove absolute positioning */
+  margin-left: auto; /* push it to the right */
   background: #001C4D;
   border: none;
   border-radius: 999px;
   padding: 0.6rem 1.4rem;
   font-weight: 600;
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: white;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .expandButton:hover {
   background: #d5d0c8;
+  color: black;
 }
