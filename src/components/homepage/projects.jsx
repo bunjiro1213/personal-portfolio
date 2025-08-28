@@ -3,7 +3,7 @@ import ScrollReveal from "scrollreveal";
 import styles from "./projects.module.css";
 import jacobproject from "../../images/Screenshot 2025-08-25 at 6.31.04 PM.png"; 
 import njtransit from "../../images/35ce6002-810d-44b5-87c1-541bc636240a_3392x2264.jpg"
-
+import kaggle from "../../images/Screenshot 2025-08-28 at 12.40.34 AM.png"
 
 const Projects = () => {
   useEffect(() => {
@@ -13,9 +13,10 @@ const Projects = () => {
       distance: "50px",
       origin: "bottom",
       easing: "ease-in-out",
-      interval: 200, 
-      reset: true
+      interval: 200,
+      reset: true,
     });
+
 
     // Optional: separate animation for the title
     ScrollReveal().reveal(`.${styles.projectTitle}`, {
@@ -44,7 +45,7 @@ const Projects = () => {
           <div className={styles.footerRow}>
             <div className={styles.tags}>
               <span className={styles.tag}>React.js</span>
-              <span className={styles.tag}>Python Django</span>
+              <span className={styles.tag}>Python/Django</span>
               <span className={styles.tag}>PostgreSQL</span>
               <span className={styles.tag}>Azure</span>
             </div>
@@ -60,7 +61,7 @@ const Projects = () => {
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>NJ Transit Delay Analysis</h2>
           <p className={styles.projectDescription}>
-            Analyzed NJ Transit delays by modeling the network as a weighted graph and identifying key stations.
+            Analyzed delays by modeling the network as a weighted graph and identifying key stations.
           </p>
           <div className={styles.imageWrapper}>
             <img src={njtransit} alt="NJ Transit Photo" className={styles.NJprojectImage} />
@@ -82,7 +83,7 @@ const Projects = () => {
             Built an end-to-end machine learning pipeline for price prediction.
           </p>
           <div className={styles.imageWrapper}>
-            <img src={jacobproject} alt="Project Screenshot" className={styles.projectImage} />
+            <img src={kaggle} alt="Home Prices Picture" className={styles.projectImage} />
           </div>
           <div className={styles.footerRow}>
             <div className={styles.tags}>

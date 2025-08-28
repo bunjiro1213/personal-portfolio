@@ -35,16 +35,17 @@ useEffect(() => {
 
   // 🌟 Parallax effect for the whole Homepage section
   const parallaxLayers = [
-    { target: `.${styles.nameCard}`, y: -50 },      // moves up slower
-    { target: `.${styles.photoCard}`, y: -80 },     // moves up a bit more
-    { target: `.${styles.bioCard}`, y: -100 },      // further back
-    { target: `.${styles.buildingCard}`, y: -150 }, // background-ish
-    { target: `.${styles.projectCard}`, y: -70 },
-    { target: `.${styles.contactCard}`, y: -90 },
+    { target: `.${styles.nameCard}`, x: -200, y: 0 },   // fly left
+    { target: `.${styles.photoCard}`, x: 0, y: -200 },  // fly up
+    { target: `.${styles.bioCard}`, x: 200, y: 0 },     // fly right
+    { target: `.${styles.buildingCard}`, x: 0, y: 150 },// fly down
+    { target: `.${styles.projectCard}`, x: 0, y: 80 }, // fly down
+    { target: `.${styles.contactCard}`, x: 150, y: 100 },  // diagonal right-down
   ];
 
-  parallaxLayers.forEach(({ target, y }) => {
+  parallaxLayers.forEach(({ target, x,y }) => {
     gsap.to(target, {
+      x,
       y,
       ease: "none",
       scrollTrigger: {

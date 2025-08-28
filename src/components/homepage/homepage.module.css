@@ -3,7 +3,7 @@
   grid-template-columns: repeat(10, 1fr); /* more flexible sizing */
   grid-auto-rows: 80px; /* height of each grid row "unit" */
   gap: 20px;
-  padding: 5% 10%;
+  padding: 0% 10%;
   background-color: #F3F2EC;
   min-height: 100vh;
   margin: 0 auto;

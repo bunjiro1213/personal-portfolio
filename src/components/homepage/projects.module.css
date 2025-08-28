@@ -37,7 +37,7 @@
   border-radius: 2rem;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   min-width: 320px;   /* ensures horizontal scroll */
-  max-width: 50%;
+  max-width: 45%;
   flex-shrink: 0;
   position: relative;
   scroll-snap-align: start;
@@ -81,7 +81,7 @@
 .NJprojectImage{
   width: 100%;
   height: auto;
-  max-height: 410px;
+  max-height: 370px;
   border-radius: 1rem;
   display: block;
 }
