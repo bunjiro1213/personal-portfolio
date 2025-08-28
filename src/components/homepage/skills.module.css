@@ -88,3 +88,14 @@
 .orange {
   color: #ff6f00;
 }
+
+@media (max-width: 1600px) {
+  .skillsGrid {
+    grid-template-columns: 1fr; /* stack in single column */
+  }
+
+  .title {
+    text-align: center; /* ensure title stays centered */
+    font-size: 2rem;
+  }
+}

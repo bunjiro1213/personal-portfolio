@@ -12,7 +12,7 @@ const Homepage = () => {
 useEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animate cards into view initially
+  if (window.innerWidth > 1600) {
   gsap.fromTo(
     `.${styles.card}`,
     { opacity: 0, y: 50 },
@@ -56,6 +56,7 @@ useEffect(() => {
       },
     });
   });
+}
 }, []);
   return (
     <div className={styles.container}>
