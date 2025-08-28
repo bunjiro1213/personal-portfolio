@@ -71,11 +71,19 @@
   overflow: hidden;
 }
 
-.projectImage,
-.NJprojectImage {
+.projectImage {
   width: 100%;
-  max-width: 600px;
   height: auto;
+  border-radius: 1rem;
+  display: block;
+}
+
+.NJprojectImage{
+  width: 100%;
+  height: auto;
+  max-height: 370px;
+  border-radius: 1rem;
+  display: block;
 }
 
 .footerRow {
