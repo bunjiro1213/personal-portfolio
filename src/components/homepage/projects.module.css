@@ -36,7 +36,7 @@
   padding: 1.5rem;
   border-radius: 2rem;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 320px;   /* ensures horizontal scroll */
+  min-width: 320px;
   max-width: 45%;
   flex-shrink: 0;
   position: relative;
@@ -133,4 +133,16 @@
 .expandButton:hover {
   background: #d5d0c8;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .cardsRow {
+    flex-direction: column;   /* stack instead of side scroll */
+    overflow-x: hidden;       /* no horizontal scroll */
+  }
+
+  .card {
+    max-width: 100%;          /* take full width */
+    min-width: unset;         /* no forced width */
+  }
 }
