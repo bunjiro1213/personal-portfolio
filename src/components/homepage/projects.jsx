@@ -7,22 +7,22 @@ import kaggle from "../../images/Screenshot 2025-08-28 at 12.40.34 AM.png"
 
 const Projects = () => {
   useEffect(() => {
-    // Basic reveal for all cards
     ScrollReveal().reveal(`.${styles.card}`, {
       duration: 1000,
       distance: "50px",
       origin: "bottom",
       easing: "ease-in-out",
-      interval: 200,
+      interval: 0,   
       reset: true,
+      viewFactor: 0
     });
 
-
-    // Optional: separate animation for the title
+    // Reveal the title separately
     ScrollReveal().reveal(`.${styles.projectTitle}`, {
       duration: 800,
       distance: "20px",
-      origin: "top"
+      origin: "top",
+      once: true
     });
   }, []);
 

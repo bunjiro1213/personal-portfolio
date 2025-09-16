@@ -135,14 +135,14 @@
   color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .cardsRow {
-    flex-direction: column;   /* stack instead of side scroll */
-    overflow-x: hidden;       /* no horizontal scroll */
+    flex-direction: column;   
+    overflow-x: hidden;      
   }
 
   .card {
-    max-width: 100%;          /* take full width */
-    min-width: unset;         /* no forced width */
+    max-width: 100%;       
+    min-width: unset;        
   }
 }
