@@ -12,51 +12,55 @@ const Homepage = () => {
 useEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  if (window.innerWidth > 1600) {
   gsap.fromTo(
     `.${styles.card}`,
     { opacity: 0, y: 50 },
     { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
   );
 
-  // Animate the name text
   gsap.fromTo(
     `.${styles.blackNameText}, .${styles.grayNameText}`,
     { opacity: 0, x: -30 },
     { opacity: 1, x: 0, duration: 1, delay: 0.5, stagger: 0.2 }
   );
 
-  // Animate the icons
   gsap.fromTo(
     `.${styles.icon}`,
     { scale: 0, opacity: 0 },
     { scale: 1, opacity: 1, duration: 0.8, delay: 1, stagger: 0.2, ease: "back.out(1.7)" }
   );
 
-  // 🌟 Parallax effect for the whole Homepage section
-  const parallaxLayers = [
-    { target: `.${styles.nameCard}`, x: -200, y: 0 },   // fly left
-    { target: `.${styles.photoCard}`, x: 0, y: -200 },  // fly up
-    { target: `.${styles.bioCard}`, x: 200, y: 0 },     // fly right
-    { target: `.${styles.buildingCard}`, x: 0, y: 150 },// fly down
-    { target: `.${styles.projectCard}`, x: 0, y: 80 }, // fly down
-    { target: `.${styles.contactCard}`, x: 150, y: 100 },  // diagonal right-down
-  ];
+  // ✅ Media query for parallax
+  ScrollTrigger.matchMedia({
+    "(min-width: 1250px)": () => {
+      const parallaxLayers = [
+        { target: `.${styles.nameCard}`, x: -200, y: 0 },
+        { target: `.${styles.photoCard}`, x: 0, y: -200 },
+        { target: `.${styles.bioCard}`, x: 200, y: 0 },
+        { target: `.${styles.buildingCard}`, x: 0, y: 150 },
+        { target: `.${styles.projectCard}`, x: 0, y: 80 },
+        { target: `.${styles.contactCard}`, x: 150, y: 100 }
+      ];
 
-  parallaxLayers.forEach(({ target, x,y }) => {
-    gsap.to(target, {
-      x,
-      y,
-      ease: "none",
-      scrollTrigger: {
-        trigger: `.${styles.container}`, // whole homepage section
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+      parallaxLayers.forEach(({ target, x, y }) => {
+        gsap.to(target, {
+          x,
+          y,
+          ease: "none",
+          scrollTrigger: {
+            trigger: `.${styles.container}`,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
+    }
   });
-}
+
+  return () => {
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  };
 }, []);
   return (
     <div className={styles.container}>
@@ -124,5 +128,4 @@ useEffect(() => {
     </div>
   );
 };
-
 export default Homepage;

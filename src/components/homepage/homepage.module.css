@@ -1,7 +1,7 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* more flexible sizing */
-  grid-auto-rows: 80px; /* height of each grid row "unit" */
+  grid-template-columns: repeat(10, 1fr); 
+  grid-auto-rows: 80px; 
   gap: 20px;
   padding: 0% 10%;
   background-color: #F3F2EC;
@@ -13,12 +13,12 @@
 .grayText,
 .blackContactText,
 .grayContactText {
-  font-size: clamp(1.5rem, 2vw, 2.5rem); /* scales between 24px - 40px */
+  font-size: clamp(1.5rem, 2vw, 2.5rem); 
 }
 
 
 .bioText {
-  font-size: clamp(1rem, 1.5vw, 1.6rem); /* scales between ~16px - 25px */
+  font-size: clamp(1rem, 1.5vw, 1.6rem); 
 }
 
 /* Generic Card Styles */
@@ -45,11 +45,8 @@
   transform: scale(1.2);
 }
 
-
-
-/* ✅ Manual grid placement — adjust these as needed */
 .nameCard {
-  grid-column: 1 / span 4;   /* spans 5 out of 12 columns */
+  grid-column: 1 / span 4; 
   grid-row: span 2;
   justify-content: center;
 }
