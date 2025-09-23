@@ -1,7 +1,7 @@
 .projectSection {
   background-color: #F3F2EC;
   padding: 4rem 2rem;
-  overflow-x: auto; /* enables horizontal scroll */
+  overflow-x: auto;
 }
 
 .projectTitle {
@@ -15,14 +15,13 @@
 }
 
 .blackText {
-  color: #000;
+  color: #000; 
 }
 
 .grayText {
   color: #898989;
 }
 
-/* 🔑 Cards container (row layout) */
 .cardsRow {
   display: flex;
   gap: 2rem;
@@ -88,7 +87,7 @@
 
 .footerRow {
   display: flex;
-  justify-content: space-between; /* pushes tags left, button right */
+  justify-content: space-between; 
   align-items: center;
   margin-top: 1.5rem;
 }
@@ -97,7 +96,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  flex: 1; /* lets it shrink/grow */
+  flex: 1;
 }
 
 .tag {
@@ -105,7 +104,7 @@
   border: 2px solid #000;
   border-radius: 999px;
   padding: clamp(0.3rem, 1vw, 0.6rem) clamp(0.6rem, 2vw, 1.2rem);
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem); /* smaller on phones, bigger on desktop */
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem); 
   font-weight: 500;
   color: #000;
   cursor: default;
@@ -114,13 +113,13 @@
 
 
 .tag:hover {
-  background: #000;               /* fill black */
-  color: #fff;                    /* white text */
+  background: #000;              
+  color: #fff;              
 }
 
 .expandButton {
-  position: static;  /* remove absolute positioning */
-  margin-left: auto; /* push it to the right */
+  position: static; 
+  margin-left: auto; 
   background: #001C4D;
   border: none;
   border-radius: 999px;
@@ -129,6 +128,8 @@
   color: white;
   cursor: pointer;
   transition: background 0.3s;
+  font-size: clamp(1rem, 1.5vw, 1.1rem); 
+
 }
 
 .expandButton:hover {
@@ -139,7 +140,7 @@
 .projectImage,
 .NJprojectImage {
   width: 100%;
-  height: clamp(200px, 25vw, 350px); /* ✅ responsive height */
+  height: clamp(200px, 25vw, 350px);
   object-fit: cover;
   border-radius: 1rem;
   display: block;
