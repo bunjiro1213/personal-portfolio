@@ -30,7 +30,6 @@ useEffect(() => {
     { scale: 1, opacity: 1, duration: 0.8, delay: 1, stagger: 0.2, ease: "back.out(1.7)" }
   );
 
-  // ✅ Media query for parallax
   ScrollTrigger.matchMedia({
     "(min-width: 1250px)": () => {
       const parallaxLayers = [
@@ -64,7 +63,6 @@ useEffect(() => {
 }, []);
   return (
     <div className={styles.container}>
-      {/* Name Card */}
       <div className={`${styles.card} ${styles.nameCard}`}>
         <h1>
           <span className={styles.blackNameText}>Bunjiro </span>
@@ -72,26 +70,23 @@ useEffect(() => {
         </h1>
       </div>
 
-      {/* Photo Card */}
       <div className={`${styles.card} ${styles.photoCard}`}>
         <img src={photo} alt="Bunjiro" className={styles.circleImage} />
       </div>
 
-      {/* Bio Card */}
       <div className={`${styles.card} ${styles.bioCard}`}>
         <p className={styles.bioText}>
-          <strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit.
-          Vestibulum odio arcu, efficitur nec risus ut, porta auctor lorem.
-          <strong> Phasellus rutrum quam sed tincidunt varius.</strong> Suspendisse.
+          <strong>Hey, I'm Bunjiro!</strong> I’m passionate about <strong>data science</strong> and love exploring how data can power real-world applications. 
+          Right now, I’m working on an <strong>AI app</strong> that helps sellers quickly figure out the right price for their items and list 
+          them across major resale markets. I also enjoy <strong>full-stack development, UI/UX design, and graphic design </strong>Outside of tech, I’m really into running, 
+          Formula 1, soccer, trains, bowling, and cooking.
         </p>
       </div>
 
-      {/* Image Card */}
       <div className={`${styles.card} ${styles.buildingCard}`}>
         <img src={building} alt="Building" className={styles.roundedImage} />
       </div>
 
-      {/* Projects Card */}
       <div className={`${styles.card} ${styles.projectCard}`}>
         <h2>
           <span className={styles.blackText}>See my latest</span>
@@ -109,7 +104,6 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* Contact Card */}
       <div className={`${styles.card} ${styles.contactCard}`}>
         <h2>
           <span className={styles.blackContactText}>Contact</span>

@@ -16,10 +16,10 @@
   font-size: clamp(1.5rem, 2vw, 2.5rem); 
 }
 
-
 .bioText {
-  font-size: clamp(1rem, 1.5vw, 1.6rem); 
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem); 
 }
+
 
 /* Generic Card Styles */
 .card {
@@ -94,15 +94,20 @@
   font-weight: bold;
 }
 
-.blackNameText{
-  color: #000;
+.blackNameText,
+.grayNameText {
+  font-size: clamp(2.5rem, 3vw, 3.3rem);
   font-weight: bold;
 }
 
-.grayNameText{
-  color: #898989;
-  font-weight: bold;
+.blackNameText {
+  color: #000;
 }
+
+.grayNameText {
+  color: #898989;
+}
+
 
 .bioText{
   color: #000;
@@ -209,7 +214,7 @@
   .grayText,
   .blackContactText,
   .grayContactText {
-    font-size: 1.2rem !important;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
     text-align: center;
   }
 

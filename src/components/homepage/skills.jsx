@@ -40,7 +40,7 @@ const Skills = () => {
           <h2>
             <span className={styles.highlightOrange}>Backend Development</span>
           </h2>
-          <p>Design scalable APIs and manage databases.</p>
+          <p>Working with databases and learning server-side development fundamentals.</p>
         </div>
       </div>
     </div>
