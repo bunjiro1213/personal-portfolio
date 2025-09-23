@@ -9,21 +9,25 @@
   background: #fff;
   padding: 1rem 2.5rem;
   border-radius: 2rem; /* rounded pill */
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);  font-weight: bold;
   margin-bottom: 3rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+.blackText,
+.grayText {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-weight: bold;
+}
+
 .blackText {
   color: #000;
-  font-weight: bold;
 }
 
 .grayText {
   color: #898989;
-  font-weight: bold;
 }
+
 
 .skillsGrid {
   display: grid;
@@ -46,19 +50,19 @@
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem); 
   margin-bottom: 1rem;
 }
 
 .skillCard h2 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .skillCard p {
   color: #555;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem); 
   line-height: 1.4;
 }
 
@@ -89,13 +93,3 @@
   color: #ff6f00;
 }
 
-@media (max-width: 1600px) {
-  .skillsGrid {
-    grid-template-columns: 1fr; /* stack in single column */
-  }
-
-  .title {
-    text-align: center; /* ensure title stays centered */
-    font-size: 2rem;
-  }
-}
