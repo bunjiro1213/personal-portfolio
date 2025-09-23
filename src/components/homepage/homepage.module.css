@@ -20,12 +20,10 @@
   font-size: clamp(0.8rem, 1.5vw, 1.2rem); 
 }
 
-
-/* Generic Card Styles */
 .card {
-  background: rgba(255, 255, 255, 0.7); /* semi-translucent white */
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* softer, deeper shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -83,7 +81,6 @@
   grid-row: span 4;
 }
 
-/* Specific Visual Styling */
 .blackText {
   color: #000;
   font-weight: bold;
@@ -124,17 +121,17 @@
 }
 
 .circleImage {
-  width: 100%;       /* scales with the card width */
-  max-width: 180px; /* prevents it from getting too big */
-  min-width: 100px; /* prevents it from getting too tiny */
-  height: auto;     /* keeps aspect ratio */
+  width: 100%;      
+  max-width: 180px; 
+  min-width: 100px; 
+  height: auto;   
   border-radius: 50%;
   object-fit: cover;
 }
 
 .roundedImage {
   width: 100%;
-  max-width: 600px;  /* don’t blow up too large */
+  max-width: 600px; 
   height: auto;
   object-fit: cover;
 }

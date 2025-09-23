@@ -17,7 +17,6 @@ const Projects = () => {
       viewFactor: 0
     });
 
-    // Reveal the title separately
     ScrollReveal().reveal(`.${styles.projectTitle}`, {
       duration: 800,
       distance: "20px",
