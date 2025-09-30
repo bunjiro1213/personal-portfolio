@@ -129,7 +129,6 @@
   cursor: pointer;
   transition: background 0.3s;
   font-size: clamp(1rem, 1.5vw, 1.1rem); 
-
 }
 
 .expandButton:hover {
