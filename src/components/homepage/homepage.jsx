@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Homepage.module.css";
+import styles from "./homepage.module.css";
 import photo from '../../images/157149457.jpeg';
 import building from '../../images/52148898258_089d86bc03_o.jpg';
 import github from '../../images/Octicons-mark-github.svg'
@@ -77,8 +77,7 @@ useEffect(() => {
       <div className={`${styles.card} ${styles.bioCard}`}>
         <p className={styles.bioText}>
           <strong>Hey, I'm Bunjiro!</strong> I’m passionate about <strong>data science</strong> and love exploring how data can power real-world applications. 
-          Right now, I’m working on an <strong>AI app</strong> that helps sellers quickly figure out the right price for their items and list 
-          them across major resale markets. I also enjoy <strong>full-stack development, UI/UX design, and graphic design </strong>Outside of tech, I’m really into running, 
+          Currently, I work at <strong>Ardelyx</strong> as a <strong>Market Access and Patient Services Analytics Intern.</strong> I also enjoy <strong>full-stack development, UI/UX design, and graphic design.</strong> Outside of tech, I’m really into running, 
           Formula 1, soccer, trains, bowling, and cooking.
         </p>
       </div>
@@ -97,6 +96,7 @@ useEffect(() => {
           <span className={styles.allProjects}>All Projects</span>
           <button
             className={styles.arrowButton}
+            aria-label="Scroll to projects"
             onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
           >
             &rarr;
@@ -114,7 +114,7 @@ useEffect(() => {
           <a href="https://github.com/bunjiro1213" target="_blank" rel="noopener noreferrer">
             <img src={github} alt="GitHub" className={styles.icon} />
           </a>
-          <a href="www.linkedin.com/in/bunjiro-yamada-339b71280" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/bunjiro-yamada-339b71280" target="_blank" rel="noopener noreferrer">
             <img src={linkedin} alt="LinkedIn" className={styles.icon} />
           </a>
         </div>

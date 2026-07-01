@@ -1,73 +1,203 @@
 .ExperienceSection {
-  background-color: #f3f2ec;
-  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.95), transparent 28rem),
+    linear-gradient(180deg, #f8f7f2 0%, #efeee8 100%);
+  padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 5vw, 5rem);
   text-align: left;
 }
 
+.ExperienceSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  background-size: 100% 4.5rem;
+  pointer-events: none;
+}
+
+.intro {
+  position: relative;
+  max-width: 760px;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.eyebrow {
+  color: #3f6f8f;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
 .title {
-  display: inline-block;
-  background: #fff;
-  padding: 1rem 2.5rem;
-  border-radius: 2rem;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: bold;
-  margin-bottom: 3rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: clamp(2.6rem, 7vw, 5.25rem);
+  font-weight: 750;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  margin: 0;
 }
 
 .blackText {
   color: #000;
-  font-weight: bold;
+  font-weight: 750;
 }
 
 .grayText {
-  color: #898989;
-  font-weight: bold;
+  color: #8a8a8e;
+  font-weight: 750;
 }
 
-/* Experience Card */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  max-width: 1050px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: clamp(8.5rem, 18vw, 14rem);
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #b9b9bd 12%, #b9b9bd 88%, transparent);
+}
+
+.timelineItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(7rem, 16vw, 12rem) 2.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.datePill {
+  justify-self: end;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 999px;
+  color: #555;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  white-space: nowrap;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.marker {
+  position: relative;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.8rem;
+  border: 4px solid #f8f7f2;
+  border-radius: 50%;
+  background: #3f6f8f;
+  box-shadow: 0 0 0 1px rgba(63, 111, 143, 0.18), 0 10px 24px rgba(63, 111, 143, 0.24);
+}
+
 .experienceCard {
-  background: #fff;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.09);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  backdrop-filter: blur(22px);
 }
 
 .experienceCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+.cardContent {
+  min-width: 0;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 0.5rem;
 }
 
 .role {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  font-weight: bold;
-  color: #0066ff; 
-}
-
-.date {
-  font-size: clamp(0.85rem, 2vw, 1rem);
-  color: #666;
+  color: #111;
+  font-size: clamp(1.7rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  margin: 0;
 }
 
 .company {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 1rem;
+  color: #3f6f8f;
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
 }
 
 .description {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-  color: #444;
+  color: #4b4b4f;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
   line-height: 1.6;
-  margin-bottom: 0.5rem;
+  margin: 1.25rem 0 0;
+  max-width: 720px;
+}
+
+.experienceImage {
+  flex: 0 0 clamp(5rem, 12vw, 8rem);
+  width: clamp(5rem, 12vw, 8rem);
+  aspect-ratio: 1;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 720px) {
+  .timeline {
+    gap: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 0.45rem;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1rem minmax(0, 1fr);
+  }
+
+  .datePill {
+    grid-column: 2;
+    justify-self: start;
+    margin-bottom: -0.5rem;
+  }
+
+  .marker {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin-top: 0.9rem;
+  }
+
+  .experienceCard {
+    grid-column: 2;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .experienceImage {
+    width: 5.5rem;
+    flex-basis: 5.5rem;
+    border-radius: 1.25rem;
+  }
 }
