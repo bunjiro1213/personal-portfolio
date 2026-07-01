@@ -5,10 +5,13 @@ import { FaChartLine, FaBrain, FaCode, FaServer } from "react-icons/fa";
 const Skills = () => {
   return (
     <div className={styles.skillsSection}>
-      <h1 className={styles.title}>
-        <span className={styles.blackText}>My </span>
-        <span className={styles.grayText}>Skills</span>
-      </h1>
+      <div className={styles.intro}>
+        <p className={styles.eyebrow}>Capabilities</p>
+        <h1 className={styles.title}>
+          <span className={styles.blackText}>My </span>
+          <span className={styles.grayText}>Skills</span>
+        </h1>
+      </div>
 
       <div className={styles.skillsGrid}>
         <div className={styles.skillCard}>

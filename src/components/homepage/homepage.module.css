@@ -1,50 +1,41 @@
 .container {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(10, 1fr); 
-  grid-auto-rows: 80px; 
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 80px;
   gap: 20px;
-  padding: 0% 10%;
-  background-color: #F3F2EC;
   min-height: 100vh;
   margin: 0 auto;
+  padding: 0 10%;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.95), transparent 28rem),
+    linear-gradient(180deg, #f8f7f2 0%, #f3f2ec 100%);
+  overflow: hidden;
 }
 
-.blackText,
-.grayText,
-.blackContactText,
-.grayContactText {
-  font-size: clamp(1.5rem, 2vw, 2.5rem); 
-}
-
-.bioText {
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem); 
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  background-size: 100% 4.5rem;
+  pointer-events: none;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
-  padding: 30px;
+  position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.arrowButton {
-  font-size: 1.5rem;
-  color: #a1a1a1;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.arrowButton:hover {
-  color: #000;
-  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.09);
+  padding: 30px;
+  backdrop-filter: blur(14px);
 }
 
 .nameCard {
-  grid-column: 1 / span 4; 
+  grid-column: 1 / span 4;
   grid-row: span 2;
   justify-content: center;
 }
@@ -59,15 +50,15 @@
 .bioCard {
   grid-column: 7 / span 4;
   grid-row: span 4;
-  overflow-y: auto;
   justify-content: center;
+  overflow-y: auto;
 }
 
 .buildingCard {
   grid-column: 1 / span 4;
   grid-row: span 6;
-  padding: 0px;
   width: 100%;
+  padding: 0;
 }
 
 .projectCard {
@@ -81,58 +72,63 @@
   grid-row: span 4;
 }
 
-.blackText {
-  color: #000;
-  font-weight: bold;
+.blackNameText,
+.grayNameText {
+  font-size: clamp(2.4rem, 3vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.03;
 }
 
-.grayText {
-  color: #898989;
-  font-weight: bold;
+.blackText,
+.grayText,
+.blackContactText,
+.grayContactText {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
 }
 
 .blackNameText,
-.grayNameText {
-  font-size: clamp(2.5rem, 3vw, 3.3rem);
-  font-weight: bold;
-}
-
-.blackNameText {
+.blackText,
+.blackContactText {
   color: #000;
 }
 
-.grayNameText {
+.grayNameText,
+.grayText,
+.grayContactText {
   color: #898989;
 }
 
-
-.bioText{
-  color: #000;
+.bioText {
+  color: #222;
+  font-size: clamp(0.9rem, 1.45vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.55;
+  margin: 0;
 }
 
-.blackContactText{
-  color: #000;
-  font-weight: bold;
-}
-
-.grayContactText{
-  color: #898989;
-  font-weight: bold;
+.bioText strong {
+  color: #111;
+  font-weight: 700;
 }
 
 .circleImage {
-  width: 100%;      
-  max-width: 180px; 
-  min-width: 100px; 
-  height: auto;   
+  width: 100%;
+  max-width: 180px;
+  min-width: 100px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .roundedImage {
   width: 100%;
-  max-width: 600px; 
-  height: auto;
+  height: 100%;
+  border-radius: 25px;
   object-fit: cover;
 }
 
@@ -144,13 +140,21 @@
 }
 
 .allProjects {
-  color: #a1a1a1;
-  font-weight: bold;
+  color: #777;
+  font-weight: 700;
 }
 
-.arrow {
+.arrowButton {
+  background: none;
+  border: none;
+  color: #777;
   font-size: 1.5rem;
-  color: #a1a1a1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.arrowButton:hover {
+  color: #000;
+  transform: scale(1.2);
 }
 
 .iconRow {
@@ -160,41 +164,22 @@
 }
 
 .icon {
-  width: clamp(1.5rem, 5vw, 60px); 
+  width: clamp(1.5rem, 5vw, 60px);
   height: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-
-.roundedImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 25px;
+.icon:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 1250px) {
   .container {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: auto;
+    padding: 2rem;
   }
-
-  .buildingCard {
-    grid-column: 1 / -1 !important;
-    grid-row: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .roundedImage {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
 
   .nameCard,
   .photoCard,
@@ -202,8 +187,21 @@
   .buildingCard,
   .projectCard,
   .contactCard {
-    grid-column: 1 / -1 !important;
+    grid-column: 1 / -1;
     grid-row: auto;
+  }
+
+  .buildingCard {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .roundedImage {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
   }
 
   .bioText,
@@ -211,7 +209,6 @@
   .grayText,
   .blackContactText,
   .grayContactText {
-    font-size: clamp(0.9rem, 2vw, 1.5rem);
     text-align: center;
   }
 
@@ -222,9 +219,5 @@
 
   .iconRow {
     justify-content: center;
-  }
-
-  .roundedImage {
-    height: auto;
   }
 }
