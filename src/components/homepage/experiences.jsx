@@ -2,8 +2,27 @@ import React from "react";
 import styles from "./experiences.module.css";
 import fizeekLogo from "../../images/fizeek-logo.jpg";
 import ardelyxLogo from "../../images/ardelyx-logo.png";
+import takihyoLogo from "../../images/takihyo-logo.png";
 
 const experiences = [
+  {
+    role: "AI & Data Strategy Intern",
+    company: "Takihyo",
+    date: "Aug 2026 - Present",
+    image: takihyoLogo,
+    imageAlt: "Takihyo logo",
+    description:
+      "Research enterprise AI and analytics implementations across finance, supply chain, and customer operations to identify opportunities for workflow improvement.",
+  },
+  {
+    role: "Market Access and Patient Services Analytics",
+    company: "Ardelyx",
+    date: "Jun 2026 - Aug 2026",
+    image: ardelyxLogo,
+    imageAlt: "Ardelyx logo",
+    description:
+      "Supporting analytics work across market access and patient services, translating data into practical insights for access strategy, operations, and patient support programs.",
+  },
   {
     role: "Data Science Intern",
     company: "Fizeek",
@@ -12,15 +31,6 @@ const experiences = [
     imageAlt: "Fizeek logo",
     description:
       "Collaborating with the founding team to design and implement data-driven features for a social fitness app focused on bodybuilding and workout progress tracking.",
-  },
-  {
-    role: "Market Access and Patient Services Analytics",
-    company: "Ardelyx",
-    date: "Jun 2026 – Present",
-    image: ardelyxLogo,
-    imageAlt: "Ardelyx logo",
-    description:
-      "Supporting analytics work across market access and patient services, translating data into practical insights for access strategy, operations, and patient support programs.",
   },
 ];
 
